@@ -14,3 +14,6 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/Lorem','P3loremController@getIndex');
+Route::post('/Lorem','P3loremController@postIndex'); 
