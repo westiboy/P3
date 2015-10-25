@@ -29,11 +29,11 @@ class P3loremController extends Controller
             'paragraphs' => 'required|numeric',
             ]);
         
-        /* use code from the Lorum Ipsum Generator
+        //* use code from the Lorum Ipsum Generator
         $generator = new Badcow\LoremIpsum\Generator();
         $paragraphs = $generator->getParagraphs(5);
             echo implode('<p>', $paragraphs);
-        */
+        //*/
         dd($request->all());
         //return 'Generate paragraphs';
     }
