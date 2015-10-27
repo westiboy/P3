@@ -30,7 +30,10 @@ class P3loremController extends Controller
             'paragraphs' => 'required|numeric|min:0|max:10',
             ]);
 
+        //Pass the paragraphs variable from teh form, to the Lorem package to generate text
         $Lorem = Lorem::paragraphs($nb = $_POST['paragraphs'], $asText = false);
+        
+        //Test the text and if set, return the data
         if (isset($Lorem)) {
             foreach($Lorem as $val) {
                 print $val;
