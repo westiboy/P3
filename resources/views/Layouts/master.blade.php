@@ -17,8 +17,8 @@
 
     <header>
         <img
-        src='http://making-the-internet.s3.amazonaws.com/laravel-foobooks-logo@2x.png'
-        style='width:300px'
+        src='https://c1.staticflickr.com/3/2720/4119110890_8bdcd798e2.jpg'
+        style='width:500px'
         alt='P3 Logo'>
     </header>
 
