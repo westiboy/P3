@@ -20,20 +20,20 @@ such as a page specific stylesheets.
     <h1>Generate some Lorem Ipsum</h1>
 
     <form method='POST' action='/Lorem'>
-    	
-    	<input type='hidden' name='_token' value='{{ csrf_token() }}'>
+        
+        <input type='hidden' name='_token' value='{{ csrf_token() }}'>
 
-    	Number of paragraphs: <input type='integer' name='paragraphs' value='{{old('paragraphs')}}'><br>
-    	
-    	@if(count($errors) > 0)
-		    <ul>
-		        @foreach ($errors->all() as $error)
-		            <li>{{ $error }}</li>
-		        @endforeach
-		    </ul>
-		@endif
+        Number of paragraphs: <input type='number' name='paragraphs' min='0' max='10'><br>
+        
+        @if(count($errors) > 0)
+            <ul>
+                @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        @endif
 
-    	Generate <input type='submit' name='generate'>
+        Generate <input type='submit' name='generate'>
 
     </form>
 @stop

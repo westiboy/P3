@@ -7,8 +7,8 @@ use P3\http\Requests;
 use P3\http\Controllers\Controller;
 
 //LoremIpsum Namespace
-use Badcow\LoremIpsum;
-use Badcow\LoremIpsum\Generator;
+use Faker\Provider\Lorem as Lorem;
+use Faker\Factory as Factory;
 
 class P3loremController extends Controller
 {
@@ -17,25 +17,28 @@ class P3loremController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function getindex()
+    public function getLorem()
     {
         //return 'Show paragraphs';
         return view('P3Lorem.P3Lorem');
     }
 
-    public function postindex(Request $request)
+    public function postLorem(Request $request)
     {
+        //Validate that the number of paragraphs is set, and is a number            
         $this->validate($request, [
-            'paragraphs' => 'required|numeric',
+            'paragraphs' => 'required|numeric|min:0|max:10',
             ]);
-        
-        //* use code from the Lorum Ipsum Generator
-        $generator = new Badcow\LoremIpsum\Generator();
-        $paragraphs = $generator->getParagraphs(5);
-            echo implode('<p>', $paragraphs);
-        //*/
-        dd($request->all());
-        //return 'Generate paragraphs';
+
+        $Lorem = Lorem::paragraphs($nb = $_POST['paragraphs'], $asText = false);
+        if (isset($Lorem)) {
+            foreach($Lorem as $val) {
+                print $val;
+            };
+        } else {
+            echo 'not working';
+        } 
+
     }
 
 }
