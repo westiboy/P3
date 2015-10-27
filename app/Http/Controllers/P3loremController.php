@@ -2,7 +2,7 @@
 
 namespace P3\http\Controllers;
 
-use Illuminate\Http\Request;
+use Illuminate\http\Request;
 use P3\http\Requests;
 use P3\http\Controllers\Controller;
 
