@@ -20,7 +20,7 @@ class P3loremController extends Controller
     public function getLorem()
     {
         //return 'Show paragraphs';
-        return view('P3Lorem.P3Lorem');
+        return view('P3lorem.P3Lorem');
     }
 
     public function postLorem(Request $request)
