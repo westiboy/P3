@@ -8,7 +8,6 @@ use P3\Http\Controllers\Controller;
 
 //LoremIpsum Namespace
 use Faker\Provider\Lorem as Lorem;
-use Faker\Factory as Factory;
 
 class P3loremController extends Controller
 {

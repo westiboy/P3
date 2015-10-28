@@ -17,3 +17,6 @@ Route::get('/', function () {
 
 Route::get('/Lorem','P3loremController@getLorem');
 Route::post('/Lorem','P3loremController@postLorem');
+
+Route::get('/User','P3UserController@getUser');
+Route::post('/User','P3UserController@postUser');
