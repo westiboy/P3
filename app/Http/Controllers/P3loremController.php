@@ -35,7 +35,7 @@ class P3loremController extends Controller
         
         //Test the text and if set, return the data
         if (isset($Lorem)) {
-            return view('P3Lorem.P3LoremDisplay')->with(['loremtext' => $Lorem]);
+            return view('P3lorem.P3LoremDisplay')->with(['loremtext' => $Lorem]);
             //dd($Lorem);
             /*
             foreach($Lorem as $val) {
