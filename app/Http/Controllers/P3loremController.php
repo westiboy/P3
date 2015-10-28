@@ -1,10 +1,10 @@
 <?php
 
-namespace P3\http\Controllers;
+namespace P3\Http\Controllers;
 
-use Illuminate\http\Request;
-use P3\http\Requests;
-use P3\http\Controllers\Controller;
+use Illuminate\Http\Request;
+use P3\Http\Requests;
+use P3\Http\Controllers\Controller;
 
 //LoremIpsum Namespace
 use Faker\Provider\Lorem as Lorem;
