@@ -19,20 +19,13 @@ such as a page specific stylesheets.
 @section('content')
     <h1>Your Random Users</h1>
 
-		// generate data by accessing properties
-	    echo $faker->name;
-	      // 'Lucy Cechtelar';
-	    echo $faker->address;
-	      // "426 Jordy Lodge
-	      // Cartwrightshire, SC 88120-6700"
-	    echo $faker->text;
-	    
-
-	    @foreach($faker as $text)
-
-	    {{ $text }} <br>
-
-	    @endforeach
+		@foreach ($users as $user)
+			<p>
+		  	@foreach ($user as $key => $value)
+			    {{ $key }}: {{ $value }}<br>
+			@endforeach
+			</p><br>
+		@endforeach
 
 @stop
 

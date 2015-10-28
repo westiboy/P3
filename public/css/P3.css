@@ -1,3 +1,40 @@
 body {
 	padding: 1em;
 }
+header, nav {
+	background-color: #E0E0FF;
+	overflow: auto;
+}
+header {
+	box-shadow: 20px 10px 10px #777777;
+	border-radius: 25px;
+}
+header img {
+	width: 30%;
+	float: left;
+	border-radius: 25px;
+}
+nav {
+	font-weight: bold;
+	font-color: blue;
+	width: 70%;
+	float: right;
+}
+nav ul {
+	text-align: right;
+	font-size: 1.5em;
+}
+nav li {
+	display: inline;
+}
+nav a {
+	padding: 1em 1em 0 1em;
+	text-decoration: none;
+	color: blue;
+}
+nav a:visited {
+	color: blue;
+}
+nav a:hover {
+	background-color: grey;
+}

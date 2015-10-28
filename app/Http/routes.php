@@ -12,7 +12,7 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('P3Home');
 });
 
 Route::get('/Lorem','P3loremController@getLorem');

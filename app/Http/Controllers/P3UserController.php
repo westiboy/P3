@@ -8,7 +8,7 @@ use P3\Http\Controllers\Controller;
 
 //Random user package
 use Faker\Factory as Factory;
-use Faker\Provider\en_US\Person as Person;
+use Faker\Provider\Person as Person;
 
 class P3UserController extends Controller
 {
@@ -25,20 +25,28 @@ class P3UserController extends Controller
         
         //Validate that the number of paragraphs is set, and is a number            
         $this->validate($request, [
-            'users' => 'required|numeric|min:0|max:100',
+            'usernum' => 'required|numeric|min:0|max:100',
             ]);
         
         //Set the user count to the var "users"
-        $users = $_POST['users'];
+        $usernum = $_POST['usernum'];
 
         //instantiate a faker generator
         $faker = Factory::create();
         
-        for ($i=0; $i < $users; $i++) {
-            echo $faker->name, " <br /> ", $faker->address, " <br /> ", $faker->email, "<br /><br />";
+        $users = array();
+
+        for ($i=0; $i < $usernum; $i++) {
+            $users[$i]['name'] = $faker->name;
+            $users[$i]['address'] = $faker->address;
+            $users[$i]['phoneNumber'] = $faker->phoneNumber;
+            $users[$i]['email'] = $faker->email;
+            $users[$i]['username'] = $faker->username;
+            $users[$i]['url'] = $faker->url;
         }
         
-        //return view('P3User.P3UserDisplay')->with('faker', $faker);
+        //dd($users);
+        return view('P3User.P3UserDisplay')->with('users', $users);
 
     }
 

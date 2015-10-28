@@ -22,6 +22,13 @@
         src='https://c1.staticflickr.com/3/2720/4119110890_8bdcd798e2.jpg'
         style='width:5 00px'
         alt='P3 Logo'>
+    <nav>
+        <ul>
+            <li><a href="./Lorem" target="_self">Generate Lorem</a></li>
+            <li><a href="./User" target="_self">Generate User</a></li>
+            <li><a href="./index.php" target="_self">Home</a></li>
+        </ul>
+    </nav>
     </header>
 
     <section>

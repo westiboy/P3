@@ -23,7 +23,7 @@ such as a page specific stylesheets.
         
         <input type='hidden' name='_token' value='{{ csrf_token() }}'>
 
-        Number of Users: <input type='number' name='users' min='0' max='100'><br>
+        Number of Users: <input type='number' name='usernum' min='0' max='100'><br>
         
         @if(count($errors) > 0)
             <ul>
