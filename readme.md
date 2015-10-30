@@ -18,7 +18,7 @@ This project is basically a random generator. It has two important parts:
    Often when building a database, it can be helpful to have random data in the database, to make that development more real world. This generator creates random user data, requiring you to choose how many users to generate.
 
 ##Link to screencast demo.##
-[CSCI_E-15_P3_Demo_Aran](http://www.screencast.com/t/B4gRyTV8U "CSCI_E-15_P3_Demo_Aran")
+[CSCI_E-15_P3_Demo_Aran](http://www.screencast.com/t/hUsqQYy3a0 "CSCI_E-15_P3_Demo_Aran")
 ##list of any plugins, libraries, packages or outside code used in the project.##
 (not including that, which is from the README instruction on teh class site
 
